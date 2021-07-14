@@ -1,22 +1,14 @@
-import { connect } from "react-redux"
-import { restartQuiz } from "../store/actiontypes/actions"
 
-const showResult = (props) => {
+const ShowResult = (props) => {
   return (
     <div className="resultShow">
       <h3 className="result-score">Score</h3>
-      <p>Correct Answer: <span className="rightcount"></span></p>
-      <p>Wrong Answer: <span className="wrongcount"></span></p>
-      <p>Attempt Question: <span className="attemptCount"></span></p>
-      <button className="restart" onClick={()=>props.restartQuiz()}>Restart</button>
+      <p>Correct Answer: <span className="rightcount">{props.correctCount}</span></p>
+      <p>Wrong Answer: <span className="wrongcount">{props.allQsn-props.correctCount}</span></p>
+  <p>Attempt Question: <span className="attemptCount">{props.attempQsn}</span></p>
+      <button className="restart" onClick={() => props.restartQuiz()}>Restart</button>
     </div>
   )
 }
 
-const mapDispatchToProps=(dispatch)=>{
-  return{
-    restartQuiz:()=>dispatch(restartQuiz())
-  }
-}
-
-export default connect(null,mapDispatchToProps)(showResult)
+export default ShowResult

@@ -191,7 +191,7 @@ button:hover {
   box-shadow: 0 0 10px rgba(0,0,0,.5);
 }
 
-.options.correct { background-color: #34cb34;}
+.options.correctOptions { background-color: #34cb34;}
 .options.freez { pointer-events: none;}
 
 .btn-group {

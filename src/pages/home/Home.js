@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getQuestions, startQuiz } from '../../store/actiontypes/actions';
+import { getQuestions, startQuiz } from '../../store/action/actions';
 import {qData} from '../../component/questions'
 
 class Home extends Component {
@@ -11,7 +11,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div class="welcome">
+      <div className="welcome">
         <h2>Welcome to Quiz</h2>
         <button onClick={()=>this.btnHandler()}>Start Quiz</button>
       </div>

@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
-import { nextQuestion, showResult } from '../store/actiontypes/actions';
+import { nextQuestion, showResult } from '../store/action/actions';
 
 const quizButtonGrp = (props) => {
   const qNum = props.qNo;
   return (
-    <div class="btn-group">
+    <div className="btn-group">
       {
-        qNum < 4 ? <button class="next" onClick={() => props.nextQsn()}>Next</button> : null
+        qNum < 4 ? <button className="next" onClick={() => props.nextQsn()}>Next</button> : null
       }
-      <button class="result" onClick={()=>props.showResutl()}>Show Result</button>
+      <button className="result" onClick={()=>props.showResutl()}>Show Result</button>
     </div>
   )
 }
